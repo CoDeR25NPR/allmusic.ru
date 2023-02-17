@@ -2,7 +2,9 @@
 <html ru-RU>
 <head>
 	<meta http-equiv="Content-Type">
+	<meta name="viewport" content="widtn=device-width, initial-clale=1">
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Главная</title>
 </head>
@@ -10,7 +12,6 @@
     body {
       margin: 0;
     }
-
     .preloader {
       position: fixed;
       left: 0;
@@ -23,7 +24,6 @@
       z-index: 1001;
       color: #eee;
     }
-
     .preloader__image {
       position: relative;
       top: 50%;
@@ -35,27 +35,21 @@
       text-align: center;
       animation: preloader-rotate 2s infinite linear;
     }
-
     @keyframes preloader-rotate {
       100% {
         transform: rotate(360deg);
       }
     }
-
     .loaded_hiding .preloader {
       transition: 0.3s opacity;
       opacity: 0;
     }
-
     .loaded .preloader {
       display: none;
     }
   </style>
 </head>
-
 <body>
-
-  <!-- Прелоадер -->
   <div class="preloader">
     <svg class="preloader__image" role="img" viewBox="0 0 512 512">
       <path fill="currentColor"
@@ -69,7 +63,7 @@
       window.setTimeout(function () {
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
-      }, 500);
+      }, 1000);
     }
   </script>
 	<img src="img/logo.png" class="logo"></img>
@@ -87,7 +81,7 @@
 			</div>
 		</div>
 		<div class="logo_block">
-			<a href="register.php"><li class="login">Регистрация</li></a>
+			<a href="register.htm"><li class="login">Регистрация</li></a>
 		</div>
 		<div class="news">
 			<h4>Последние обновления</h4>
@@ -117,7 +111,7 @@
 				<h6>Об обновлении</h6>
 			</div>
 			<div class="card_hews">
-				<img src="img/img_card_news.png" class="icon_cadr_news"></img>
+				<img src="img/img_card_news.png" class="icon_cadr_news"/>
 				<h5>Обновление</h5>
 				<h6>Об обновлении</h6>
 			</div>
